@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Viejo Martelli Restaurant</title>
+    <title>Viejo Martelly Restaurant</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
@@ -14,44 +14,40 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        background: #f4f4f4;
+        color: #333;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
       header {
         background: #333;
         color: #fff;
         padding: 10px 0;
+        width: 100%;
       }
       .container {
         width: 90%;
         margin: 0 auto;
       }
       .logo {
-        float: left;
         font-size: 24px;
         font-weight: 600;
       }
-      nav {
-        float: right;
-      }
-      nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-      nav ul li {
-        display: inline;
-        margin-left: 20px;
-      }
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 600;
-      }
       #hero {
-        background: url("https://via.placeholder.com/1200x600") no-repeat center
-          center/cover;
+        background: url("https://via.placeholder.com/1200x600") no-repeat center center/cover;
         color: #fff;
         text-align: center;
         padding: 100px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
       #hero h1 {
         font-size: 50px;
@@ -67,60 +63,15 @@
         padding: 10px 20px;
         text-decoration: none;
         font-weight: 600;
-      }
-      #menu {
-        padding: 50px 0;
-        text-align: center;
-      }
-      #menu h2 {
-        font-size: 36px;
-        margin-bottom: 30px;
-      }
-      .menu-items {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-      }
-      .menu-item {
-        width: 30%;
-        margin-bottom: 20px;
-        text-align: left;
-      }
-      .menu-item h3 {
-        margin-top: 0;
-      }
-      #contact {
-        background: #f4f4f4;
-        padding: 50px 0;
-        text-align: center;
-      }
-      #contact h2 {
-        font-size: 36px;
-        margin-bottom: 30px;
-      }
-      #contact form {
-        max-width: 600px;
-        margin: 0 auto;
-      }
-      #contact form input,
-      #contact form textarea {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-      }
-      #contact form input[type="submit"] {
-        background: #333;
-        color: #fff;
-        border: none;
-        cursor: pointer;
+        border-radius: 5px;
       }
       footer {
         background: #333;
         color: #fff;
         text-align: center;
         padding: 10px 0;
-        position: fixed;
         width: 100%;
+        position: fixed;
         bottom: 0;
       }
     </style>
@@ -128,75 +79,45 @@
   <body>
     <header>
       <div class="container">
-        <div class="logo">Viejo Martelli</div>
-        <nav>
-          <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+        <div class="logo">Viejo Martelly</div>
       </div>
     </header>
     <section id="hero">
       <div class="container">
-        <h1>Welcome to Viejo Martelli</h1>
-        <p>Experience the best culinary delights.</p>
-        <a href="#menu" class="btn">Explore Menu</a>
-      </div>
-    </section>
-    <section id="menu">
-      <div class="container">
-        <h2>Our Menu</h2>
-        <div class="menu-items">
-          <div class="menu-item">
-            <h3>Dish 1</h3>
-            <p>Description of Dish 1.</p>
-          </div>
-          <div class="menu-item">
-            <h3>Dish 2</h3>
-            <p>Description of Dish 2.</p>
-          </div>
-          <div class="menu-item">
-            <h3>Dish 3</h3>
-            <p>Description of Dish 3.</p>
-          </div>
-        </div>
+        <h1>Próximamente</h1>
+        <p>Estamos trabajando para traerte la mejor experiencia culinaria.</p>
+        <a href="#contact" class="btn">Contáctanos</a>
       </div>
     </section>
     <section id="contact">
       <div class="container">
-        <h2>Contact Us</h2>
+        <h2>Contáctanos</h2>
         <form>
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="text" name="name" placeholder="Tu Nombre" required />
+          <input type="email" name="email" placeholder="Tu Email" required />
           <textarea
             name="message"
             rows="5"
-            placeholder="Your Message"
+            placeholder="Tu Mensaje"
             required
           ></textarea>
-          <input type="submit" value="Send Message" />
+          <input type="submit" value="Enviar Mensaje" />
         </form>
       </div>
     </section>
     <footer>
-      <p>&copy; 2024 Viejo Martelli. All rights reserved.</p>
+      <p>&copy; 2024 Viejo Martelly. Todos los derechos reservados.</p>
     </footer>
     <script>
-      document
-        .querySelector("header nav ul")
-        .addEventListener("click", function (e) {
-          if (e.target.tagName === "A") {
-            const targetId = e.target.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-            window.scrollTo({
-              top: targetElement.offsetTop,
-              behavior: "smooth",
-            });
-            e.preventDefault();
-          }
+      document.querySelector(".btn").addEventListener("click", function (e) {
+        const targetId = e.target.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: "smooth",
         });
+        e.preventDefault();
+      });
     </script>
   </body>
 </html>
